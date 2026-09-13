@@ -1,0 +1,44 @@
+{
+  "stickers": {
+    "arrows": [
+      { "name": "Arrow Right", "path": "./assets/stickers/arrows/arrow-right.svg" },
+      { "name": "Arrow Curved", "path": "./assets/stickers/arrows/arrow-curved.svg" }
+    ],
+    "emojis": [
+      { "name": "Smile", "path": "./assets/stickers/emojis/emoji-smile.svg" },
+      { "name": "Wow", "path": "./assets/stickers/emojis/emoji-wow.svg" }
+    ],
+    "stars": [
+      { "name": "Star", "path": "./assets/stickers/stars/star-solid.svg" },
+      { "name": "Sparkle", "path": "./assets/stickers/stars/star-sparkle.svg" }
+    ],
+    "hearts": [
+      { "name": "Heart", "path": "./assets/stickers/hearts/heart-solid.svg" },
+      { "name": "Heart Outline", "path": "./assets/stickers/hearts/heart-outline.svg" }
+    ],
+    "decorations": [
+      { "name": "Confetti", "path": "./assets/stickers/decorations/confetti.svg" },
+      { "name": "Ribbon", "path": "./assets/stickers/decorations/ribbon.svg" }
+    ],
+    "social media": [
+      { "name": "Like", "path": "./assets/stickers/social/like-badge.svg" },
+      { "name": "Share", "path": "./assets/stickers/social/share-badge.svg" }
+    ],
+    "business": [
+      { "name": "New Badge", "path": "./assets/stickers/business/badge-new.svg" },
+      { "name": "Sale Badge", "path": "./assets/stickers/business/badge-sale.svg" }
+    ],
+    "shapes": [
+      { "name": "Blob", "path": "./assets/stickers/shapes/blob.svg" },
+      { "name": "Hex Frame", "path": "./assets/stickers/shapes/hex-frame.svg" }
+    ]
+  },
+  "presets": [
+    { "name": "Sample presets", "path": "./assets/presets/sample-presets.json" }
+  ],
+  "backgrounds": [
+    { "name": "Studio Gray", "path": "./assets/backgrounds/studio-gray.svg" },
+    { "name": "Soft Gradient", "path": "./assets/backgrounds/soft-gradient.svg" }
+  ],
+  "notes": "Add a sticker by dropping an SVG into assets/stickers/<category>/ and listing it here — no JavaScript changes required. The same applies to presets (assets/presets/) and backgrounds (assets/backgrounds/)."
+}
