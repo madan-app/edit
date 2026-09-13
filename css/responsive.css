@@ -1,0 +1,88 @@
+/* =========================================================
+   responsive.css — mobile layout: bottom nav + sheets
+   ========================================================= */
+
+#mobile-tab-bar { display: none; }
+#mobile-sheet-backdrop { display: none; }
+
+@media (max-width: 860px) {
+  :root { --topbar-h: 46px; --statusbar-h: 24px; }
+
+  #workspace {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #tool-rail {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 58px;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 4px 6px;
+    border-right: none;
+    border-top: 1px solid var(--border-subtle);
+    z-index: 300;
+  }
+  #tool-rail .rail-sep { display: none; }
+  .tool-btn { width: 46px; height: 46px; flex-shrink: 0; }
+  .tool-btn[data-tip]:hover::after { display: none; }
+
+  #right-panel {
+    position: fixed;
+    left: 0; right: 0; bottom: 58px;
+    max-height: 62vh;
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    border-radius: 14px 14px 0 0;
+    transform: translateY(110%);
+    transition: transform var(--transition-med);
+    z-index: 350;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.4);
+  }
+  #right-panel.sheet-open { transform: translateY(0); }
+  #right-panel::before {
+    content: '';
+    display: block;
+    width: 36px; height: 4px;
+    background: var(--border-strong);
+    border-radius: 2px;
+    margin: 8px auto 2px;
+  }
+
+  #stage { padding-bottom: 58px; }
+
+  #topbar { padding: 0 6px; gap: 0; }
+  #topbar .topbar-btn span.label { display: none; }
+  #topbar .logo span { display: none; }
+  .file-info-inline { display: none; }
+
+  #zoom-bar { padding: 4px 8px; }
+
+  .slider-row { grid-template-columns: 70px 1fr 36px; }
+
+  .filter-grid { grid-template-columns: repeat(4, 1fr); }
+
+  #mobile-sheet-backdrop {
+    display: block;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.001);
+    z-index: 340;
+  }
+  #mobile-sheet-backdrop.hidden { display: none; }
+}
+
+@media (max-width: 480px) {
+  .filter-grid { grid-template-columns: repeat(3, 1fr); }
+  .modal { width: 92vw; }
+}
+
+/* Touch-specific affordances (any coarse pointer) */
+@media (pointer: coarse) {
+  .slider-row input[type="range"]::-webkit-slider-thumb { width: 18px; height: 18px; }
+  .tool-btn, .topbar-btn, .icon-btn, .zoom-btn { min-width: 40px; min-height: 40px; }
+  #zoom-bar .zoom-btn { width: 34px; height: 34px; }
+}
